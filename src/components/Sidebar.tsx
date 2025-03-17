@@ -14,7 +14,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { path: '/orders', icon: 'fa-shopping-cart', label: 'Commandes' },
     { path: '/community', icon: 'fa-comments', label: 'Community Management' },
     { path: '/drive', icon: 'fa-cloud', label: 'Google Drive' },
-    { path: '/analytics', icon: 'fa-chart-bar', label: 'Analytiques' },
+    { path: '/rapports', icon: 'fa-chart-bar', label: 'Rapports' },
     { path: '/settings', icon: 'fa-cog', label: 'Paramètres' }
   ];
 
