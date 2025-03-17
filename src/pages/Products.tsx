@@ -97,7 +97,7 @@ const Products: React.FC = () => {
         
         {/* Le iframe pour intégrer Shopify */}
         <iframe 
-  src={`https://admin.shopify.com/store/${process.env.REACT_APP_SHOPIFY_STORE_ID || 'votre-boutique'}/products`} 
+  src={`https://admin.shopify.com/store/${process.env.REACT_APP_SHOPIFY_STORE_ID || '94c013'}/products`} 
   className="shopify-iframe"
   title="Shopify Admin"
 ></iframe>
