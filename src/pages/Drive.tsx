@@ -24,10 +24,10 @@ const Drive: React.FC = () => {
         
         {/* Le iframe pour intégrer Google Drive */}
         <iframe 
-          src="https://drive.google.com/embeddedfolderview?id=YOUR_FOLDER_ID#list" 
-          className="drive-iframe"
-          title="Google Drive"
-        ></iframe>
+  src={`https://drive.google.com/embeddedfolderview?id=${process.env.REACT_APP_DRIVE_FOLDER_ID || 'FOLDER_ID_PLACEHOLDER'}#list`} 
+  className="drive-iframe"
+  title="Google Drive"
+></iframe>
         
         <div className="drive-integration-notice">
           <p>

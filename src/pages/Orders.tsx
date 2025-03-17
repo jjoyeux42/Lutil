@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../styles/pages/Orders.css';
 
 const Orders: React.FC = () => {
