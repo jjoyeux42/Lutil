@@ -1,0 +1,424 @@
+.orders-page {
+    padding: 1rem;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    margin-top: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .filter-tab {
+    background: none;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    color: var(--grey-color);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .filter-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .orders-table-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orders-table th, 
+  .orders-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .orders-table th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+    color: var(--grey-color);
+  }
+  
+  .orders-table tbody tr:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .status-badge.en-attente {
+    background-color: #fff3cd;
+    color: var(--warning-color);
+  }
+  
+  .status-badge.livré {
+    background-color: #d4edda;
+    color: var(--success-color);
+  }
+  
+  .status-badge.en-transit {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+  
+  .status-badge.annulé {
+    background-color: #f8d7da;
+    color: var(--danger-color);
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .pagination-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .pagination-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .pagination-btn:hover:not(.active) {
+    background-color: #f0f0f0;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-tabs {
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+    
+    .filter-tab {
+      flex: 0 0 auto;
+    }
+    
+    .orders-table th:nth-child(3),
+    .orders-table th:nth-child(5),
+    .orders-table td:nth-child(3),
+    .orders-table td:nth-child(5) {
+      display: none;
+    }
+  }
+  .orders-page {
+    padding: 2rem;
+  }
+  
+  .page-header {
+    margin-bottom: 2rem;
+  }
+  
+  .page-header h1 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  /* Styles pour les onglets de section */
+  .section-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .section-tab {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .section-tab:hover {
+    color: #3498db;
+  }
+  
+  .section-tab.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    font-weight: 500;
+  }
+  
+  /* Styles pour les filtres */
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-container {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  .search-container input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .filter-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .filter-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 0.9rem;
+  }
+  
+  /* Style pour le bouton de synchronisation */
+  .sync-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sync-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .sync-btn i {
+    font-size: 0.9rem;
+  }
+  
+  /* Styles pour les onglets de filtres */
+  .filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-tab {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-tab:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .filter-tab.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+  }
+  
+  /* Styles pour le tableau */
+  .orders-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow-x: auto;
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .orders-table th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .orders-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Styles pour les badges de statut */
+  .status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .status-badge.en-attente {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status-badge.en-transit {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+  
+  .status-badge.livré {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-badge.annulé {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .status-badge.en-production {
+    background-color: #e0f3ff;
+    color: #0066cc;
+  }
+  
+  .status-badge.expédié {
+    background-color: #d1e7dd;
+    color: #0a3622;
+  }
+  
+  /* Styles pour les boutons d'action */
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .action-btn {
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    color: #3498db;
+  }
+  
+  /* Styles pour la pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .pagination-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .pagination-btn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .pagination-btn.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .orders-page {
+      padding: 1rem;
+    }
+  
+    .section-tabs {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .filters {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .search-container {
+      max-width: 100%;
+    }
+  
+    .filter-tabs {
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+  
+    .filter-tab {
+      white-space: nowrap;
+    }
+  
+    .orders-table th,
+    .orders-table td {
+      padding: 0.75rem 0.5rem;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  }

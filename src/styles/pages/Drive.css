@@ -1,0 +1,95 @@
+.drive-page {
+    padding: 1rem;
+  }
+  
+  .drive-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    color: var(--grey-color);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .drive-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 180px);
+  }
+  
+  .drive-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+  }
+  
+  .drive-loading i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .drive-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: white;
+  }
+  
+  .drive-integration-notice {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e1e1e1;
+    font-size: 0.9rem;
+  }
+  
+  .drive-integration-notice p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .drive-integration-notice code {
+    background-color: #e9ecef;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  .drive-integration-notice .small {
+    font-size: 0.8rem;
+    color: var(--grey-color);
+  }
+  
+  @media (max-width: 768px) {
+    .drive-container {
+      height: calc(100vh - 200px);
+    }
+  }
