@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/pages/CommunityManagement.css';
 
 const CommunityManagement: React.FC = () => {
@@ -42,15 +42,15 @@ const CommunityManagement: React.FC = () => {
   // État pour suivre l'index actif du carrousel
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Fonction pour passer à la diapositive suivante
-  const nextSlide = () => {
+  // Fonction pour passer à la diapositive suivante, mémorisée avec useCallback
+  const nextSlide = useCallback(() => {
     setActiveSlide((current) => (current === trends.length - 1 ? 0 : current + 1));
-  };
+  }, [trends.length]);
 
-  // Fonction pour passer à la diapositive précédente
-  const prevSlide = () => {
+  // Fonction pour passer à la diapositive précédente, mémorisée avec useCallback
+  const prevSlide = useCallback(() => {
     setActiveSlide((current) => (current === 0 ? trends.length - 1 : current - 1));
-  };
+  }, [trends.length]);
 
   // Auto-rotation du carrousel
   useEffect(() => {
@@ -58,7 +58,7 @@ const CommunityManagement: React.FC = () => {
       nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, [nextSlide]); // Ajout de nextSlide dans les dépendances pour corriger l'erreur ESLint
+  }, [nextSlide]);
 
   const socialNetworks = [
     {
