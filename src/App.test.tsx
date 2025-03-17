@@ -12,5 +12,4 @@ test('renders dashboard page', () => {
   // Vérifiez un élément qui existe réellement dans votre application
   // Par exemple, la présence du composant Layout
   const layoutElement = document.querySelector('.layout');
-  expect(layoutElement).toBeInTheDocument();
-});
+  expect(layoutElement).toBeInTheDocument();});

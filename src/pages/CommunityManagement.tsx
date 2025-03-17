@@ -3,6 +3,7 @@ import '../styles/pages/CommunityManagement.css';
 
 const CommunityManagement: React.FC = () => {
   // Données pour le carrousel de tendances
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [trends, setTrends] = useState([
     {
       id: 1,
@@ -57,7 +58,7 @@ const CommunityManagement: React.FC = () => {
       nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]); // Ajout de nextSlide dans les dépendances pour corriger l'erreur ESLint
 
   const socialNetworks = [
     {
